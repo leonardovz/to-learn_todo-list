@@ -56,10 +56,10 @@ export function App() {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col py-5">
-                        <form onSubmit={handleTodoAdd} preventDefault>
-                            <div class="input-group mb-0">
+                        <form onSubmit={handleTodoAdd} >
+                            <div className="input-group mb-0">
                                 <input className="form-control" ref={todoTaskRef} type="text" placeholder="Nombre de la tarea" />
-                                <span className="btn btn-success" onClick={handleTodoAdd}><i class="bi bi-plus-circle"></i></span>
+                                <span className="btn btn-success" onClick={handleTodoAdd}><i className="bi bi-plus-circle"></i></span>
                             </div>
                         </form>
                         <span className="d-block px-2 text-muted">Te quedan <b className="text-dark">{todos.filter((todo) => !todo.status).length}</b> tareas por terminar</span>
